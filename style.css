@@ -65,7 +65,7 @@ label input[type="radio"]:checked + img {
 
 .short-input {
     display: block;
-    width: 250px; /* Ustawienie szerokości na 250px */
+    width: 256px; /* Ustawienie szerokości na 250px */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
