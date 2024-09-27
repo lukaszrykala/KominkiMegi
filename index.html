@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz wyceny kominka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="wycenaForm" onsubmit="return validateForm()">
+            <div class="question active" id="question1">
+                <div class="question-heading">1. Rodzaj kominka:</div>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="kominekRodzaj" value="z_płaszczem_wodnym">
+                        <img src="Woda.svg" alt="Z płaszczem wodnym" onclick="nextQuestion(1)">
+                        <span>Z płaszczem wodnym</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="kominekRodzaj" value="powietrzny">
+                        <img src="Powietrze.svg" alt="Powietrzny" onclick="nextQuestion(1)">
+                        <span>Powietrzny</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="kominekRodzaj" value="gazowy">
+                        <img src="Gaz.svg" alt="Gazowy" onclick="nextQuestion(1)">
+                        <span>Gazowy</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="kominekRodzaj" value="koza_piec">
+                        <img src="koza.svg" alt="Koza / Piec wolnostojący" onclick="nextQuestion(1)">
+                        <span>Koza / Piec wolnostojący</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question" id="question2">
+                <div class="question-heading">2. Typ kominka:</div>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="kominekTyp" value="prosta_szyba">
+                        <img src="prosta.svg" alt="Prosta szyba" onclick="nextQuestion(2)">
+                        <span>Prosta szyba</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="kominekTyp" value="narożny">
+                        <img src="boczna.svg" alt="Narożny" onclick="nextQuestion(2)">
+                        <span>Narożny</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="kominekTyp" value="3_szybowy">
+                        <img src="3szyby.svg" alt="3 szybowy" onclick="nextQuestion(2)">
+                        <span>3 szybowy</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="question" id="question3">
+                <div class="question-heading">3. Miejscowość:</div>
+                <input type="text" name="miejscowosc" id="miejscowosc" class="short-input">
+                <span id="miejscowoscError" class="error-message"></span>
+            </div>
+
+            <div class="question" id="question4">
+                <div class="question-heading">4. Adres e-mail:</div>
+                <input type="email" name="email" id="email" class="short-input">
+                <span id="emailError" class="error-message"></span>
+            </div>
+
+            <div class="submit-container" id="submit-container" style="display: none;">
+                <div class="question" id="question5">
+                    <div class="question-heading">5. Numer telefonu (opcjonalnie):</div>
+                    <input type="tel" name="telefon" id="telefon" class="short-input" pattern="[0-9]{9}">
+                    <span id="telefonError" class="error-message"></span>
+                </div>
+                <button type="submit" id="submitBtn">Wyślij</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

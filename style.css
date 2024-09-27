@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 20px;
+    display: none; /* Ukryte na początku */
+}
+
+.question.active {
+    display: block; /* Pokaż aktywne pytania */
+}
+
+.question-heading {
+    background-color: #a0a0a0; /* Szary kolor */
+    color: white; /* Biały tekst */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+label img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 5px;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+label input[type="radio"] {
+    display: none;
+}
+
+label input[type="radio"]:checked + img {
+    border: 2px solid #a0a0a0;
+}
+
+.short-input {
+    display: block;
+    width: 250px; /* Ustawienie szerokości na 250px */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 30px; /* Zwiększenie rozmiaru przycisku */
+    background-color: #ff0000; /* Czerwony kolor */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 16px; /* Zwiększony rozmiar czcionki */
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.submit-container {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
